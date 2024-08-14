@@ -1,0 +1,16 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000bd;
+  backdrop-filter: blur(10px);
+  transition: 0.5s all ease-out;
+  z-index: 1000;
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,66 @@
+@import "./variables.scss";
+$width_content-form: 70%;
+$border_radius_elements: 5px;
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    label {
+      margin: 10px;
+      font-size: 1.7rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      font-size: 1.5rem;
+      padding: 5px;
+      width: $width_content-form;
+      border-radius: $border_radius_elements;
+    }
+
+    input[type="submit"] {
+      font-size: 1.3rem;
+      margin: 2rem;
+      width: 50%;
+      padding: 5px;
+      border-radius: $border_radius_elements;
+      border-style: none;
+      background-color: #50db9d;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:disabled {
+      background-color: #a7a7a7;
+      color: #272727;
+      cursor: not-allowed;
+    }
+
+    span {
+      background-color: $red_incorrect;
+      color: #fff;
+      margin: 10px;
+      border-radius: $border_radius_elements;
+      padding: 5px;
+      margin-top: 0;
+      transition: 0.2s all ease-out;
+      visibility: visible;
+      opacity: 1;
+      width: $width_content-form;
+    }
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
